@@ -10,6 +10,12 @@ describe('App', () => {
     expect(TestBed.createComponent(App).componentInstance).toBeTruthy();
   });
 
+  it('muestra la bienvenida', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    expect(fixture.nativeElement.textContent).toContain('Bienvenido al módulo CDAT');
+  });
+
   it('muestra el título', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
